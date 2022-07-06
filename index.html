@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+
+<script>
+const calc = {
+    num1 : 0,
+    num2 : 0,
+    operator : "",
+    result : 0,
+    calc : function () {
+        if (this.operator == "+") {
+          this.result = this.num1 + this.num2;
+        }
+        else if (this.operator == "-") {
+        this.result = this.num1 - this.num2;
+        }
+        else if (this.operator == "*") {
+        this.result = this.num1 * this.num2;
+        }
+        else if (this.operator == "/") {
+        this.result = this.num1 / this.num2;
+        }
+        else{
+            this.result = "Operator invalid !"
+        }  
+    },
+};
+calc["num1"] = 12;
+calc["num2"] = 12;
+calc["operator"] = "+";
+calc.calc();
+alert(`Result equals to ${calc["result"]}`);
+</script>
+
+</body>
+</html>
